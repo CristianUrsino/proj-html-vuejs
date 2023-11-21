@@ -1,7 +1,8 @@
 <template>
-    <h1>HEADER</h1>
-    <NavComponent/>
-    <HeroComponent/> 
+    <header>
+        <NavComponent/>
+        <HeroComponent/> 
+    </header>
 </template>
 
 <script>
