@@ -3,23 +3,6 @@ import { reactive } from "vue";
 export const store = reactive({
     currentPageName : 'home',
     cartList:[],
-    heroImgsList:[
-        {
-            id:1,
-            urlPizzaSlice:'images/h3-rev-img-2.png',
-            urlWrittenSlicePizza:'images/h3-rev-img-1.png',
-        },
-        {
-            id:2,
-            urlPizzaSlice:'images/h3-rev-img-4.png',
-            urlWrittenSlicePizza:'images/h3-rev-img-3.png',
-        },
-        {
-            id:3,
-            urlPizzaSlice:'images/h3-rev-img-6.png',
-            urlWrittenSlicePizza:'images/h3-rev-img-5.png',
-        },
-    ],
     navLinks:[
         {
             id:1,
@@ -56,7 +39,6 @@ export const store = reactive({
             },
             ]
         },
-
         {
             id:2,
             text: 'HOME',
@@ -232,4 +214,99 @@ export const store = reactive({
             ]
         },
     ],
+    heroImgsList:[
+        {
+            id:1,
+            urlPizzaSlice:'images/h3-rev-img-2.png',
+            urlWrittenSlicePizza:'images/h3-rev-img-1.png',
+        },
+        {
+            id:2,
+            urlPizzaSlice:'images/h3-rev-img-4.png',
+            urlWrittenSlicePizza:'images/h3-rev-img-3.png',
+        },
+        {
+            id:3,
+            urlPizzaSlice:'images/h3-rev-img-6.png',
+            urlWrittenSlicePizza:'images/h3-rev-img-5.png',
+        },
+    ],
+    restaurantAddresses:[
+        {
+            id: 1,
+            address:'1614 E. Bell Rd #104.',
+            city:'Salerno',
+            province:'AZ',
+            postalCode:'85022',
+            prefixTelephone:'602',
+            telephoneNumber:'867-1010',
+        },
+        {
+            id: 2,
+            address:'Vale Puglia 54',
+            city:'Torre Del Greco',
+            province:'AZ',
+            postalCode:'85022',
+            prefixTelephone:'359',
+            telephoneNumber:'867-1010',
+        },
+        {
+            id: 3,
+            address:'1614 E. Bell Rd #104.',
+            city:'Salerno',
+            province:'AZ',
+            postalCode:'85022',
+            prefixTelephone:'602',
+            telephoneNumber:'867-1010',
+        },
+        {
+            id: 4,
+            address:'Vale Puglia 54',
+            city:'Torre Del Greco',
+            province:'AZ',
+            postalCode:'85022',
+            prefixTelephone:'359',
+            telephoneNumber:'867-1010',
+        },
+    ],
+    workingHours:[
+        {
+            id:1,
+            rangeDays: 'MONDAY',
+            workingHoursRange: 'Kitchen closed',
+        },
+        {
+            id:2,
+            rangeDays: 'TUSEDAY UNTIL FRIDAY',
+            workingHoursRange: '9:00 - 22.00',
+        },
+        {
+            id:3,
+            rangeDays: 'SATURDAY',
+            workingHoursRange: 'Saturday 11 am to midnight',
+        },
+        {
+            id:4,
+            rangeDays: 'SUNDAY',
+            workingHoursRange: '9.00 - 22.00',
+        },
+    ],
+    iconFooterList:[
+        {
+            link:'#',
+            iconClass: 'fa-brands fa-twitter fa-xs',
+        },
+        {
+            link:'#',
+            iconClass: 'fa-brands fa-facebook fa-xs',
+        },
+        {
+            link:'#',
+            iconClass: 'fa-brands fa-instagram fa-xs',
+        },
+        {
+            link:'#',
+            iconClass: 'fa-brands fa-linkedin fa-xs',
+        },
+    ]
 })
