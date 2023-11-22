@@ -3,33 +3,17 @@
     <div class="hero">
 
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carouse">
+
             <div class="carousel-inner my-carousel-inner">
-                <div class="carousel-item active">
-                    <figure class="pizza-slice-img ">
-                        <img src="../../assets/images/h3-rev-img-2.png" class="d-block w-100" alt="...">
+                <div v-for="(heroImgs,index) in store.heroImgsList" :key="heroImgs.id" class="carousel-item" :class="{'active' : index === 0}">
+                    <figure class="pizza-slice-img">
+                        <img :src="heroImgs.urlPizzaSlice" class="d-block w-100" :alt="'immagine pezzo di pizza numero: ' + index">
                     </figure>
                     <figure class="written-slice-pizza-img">
-                        <img src="../../assets/images/h3-rev-img-1.png" class="d-block w-100" alt="...">
+                        <img :src="heroImgs.urlWrittenSlicePizza" class="d-block w-100" :alt="'immagine background del pezzo di pizza numero: ' + index">
                     </figure>
                 </div>
 
-                <div class="carousel-item">
-                    <figure class="pizza-slice-img">
-                        <img src="../../assets/images/h3-rev-img-2.png" class="d-block w-100" alt="...">
-                    </figure>
-                    <figure class="written-slice-pizza-img ">
-                        <img src="../../assets/images/h3-rev-img-1.png" class="d-block w-100" alt="...">
-                    </figure>
-                </div>
-
-                <div class="carousel-item">
-                    <figure class="pizza-slice-img ">
-                        <img src="../../assets/images/h3-rev-img-2.png" class="d-block w-100" alt="...">
-                    </figure>
-                    <figure class="written-slice-pizza-img ">
-                        <img src="../../assets/images/h3-rev-img-1.png" class="d-block w-100" alt="...">
-                    </figure>
-                </div>
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -47,8 +31,14 @@
 </template>
 
 <script>
+import {store} from '../../data/store'
 export default{
     name: 'HeroComponent',
+    data(){
+        return{
+            store,
+        }
+    },
 }
 </script>
 

@@ -3,6 +3,23 @@ import { reactive } from "vue";
 export const store = reactive({
     currentPageName : 'home',
     cartList:[],
+    heroImgsList:[
+        {
+            id:1,
+            urlPizzaSlice:'images/h3-rev-img-2.png',
+            urlWrittenSlicePizza:'images/h3-rev-img-1.png',
+        },
+        {
+            id:2,
+            urlPizzaSlice:'images/h3-rev-img-4.png',
+            urlWrittenSlicePizza:'images/h3-rev-img-3.png',
+        },
+        {
+            id:3,
+            urlPizzaSlice:'images/h3-rev-img-6.png',
+            urlWrittenSlicePizza:'images/h3-rev-img-5.png',
+        },
+    ],
     navLinks:[
         {
             id:1,
