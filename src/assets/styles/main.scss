@@ -28,24 +28,122 @@ a{
     background-color: $redColorBg;
     padding: 5px 30px;
     color: $whiteColorTx;
+    position: relative;
 }
 .red-text{
     color: $redColorTx;
+}
+.clickable{
+    cursor: pointer;
 }
 // ********STRUCTURE
 //header
 header{
     background-image: url("../images/cielostellato.PNG");
     color: $whiteColorTx;
+    //nav
     nav{
         height: 150px;
+        text-wrap: nowrap;
         ul{
-            margin-top: 10px;
+            height: 150px;
         }
+        .my-btn:hover{
+            background-color: $darkRedColorBg;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            span {
+                img{
+                    svg{
+                        fill: $whiteColorTx;
+                    }
+                    width: 1.5em;
+                    margin-right: 0.2em;
+                } 
+            }
+            .drop {
+                height: 150px;
+                line-height: 150px;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: $blackColorBg;
+                min-width: 250px;
+                z-index: 2000;
+                border-top: 5px solid $redColorBd;
+                a,
+                div {
+                    color: $darkGrayColorTx;
+                    padding: 5px 30px;
+                    display: block;
+                    position: relative;
+                }
+                >div{
+                    color: $whiteColorTx;
+                }
+                a.active{
+                    color: $whiteColorTx;
+                }
+                .nested-dropdown {
+                    position: absolute;
+                    top: -5px;
+                    right: 100%;
+                    display: none;
+                    z-index: 3000;
+                    background-color: $blackColorBg;
+                    min-width: 250px;
+                    border-top: 5px solid $redColorBd;
+                    a {
+                        color: $darkGrayColorTx;
+                        padding: 5px 30px;
+                        display: block;
+                    }
+                    a.active{
+                        color: $whiteColorTx;
+                    }
+                }
+            }
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:hover .nested-dropdown {
+            display: block;
+          }
         img{
-            width: 100px;
+            width: 150px;
+        }
+        .search-bar{
+            height: 150px;
+            background-color: $whiteColorBg;
+            color: $blackColorTx;
+            input{
+                border: none;
+                outline: none;
+                &:target{
+                    outline: none;
+                }
+            }
+        }
+        .cartNumber{
+            display: inline-block;
+            font-size: 0.6em;
+            color: $redColorTx;
+            width: 12px;
+            height: 12px;
+            line-height: 12px;
+            text-align: center;
+            background-color: $whiteColorBg;
+            border-radius: 50%;
+            position: relative;
+            left: 5px;
+            bottom: 5px;
         }
     }
+
     .hero{
         .my-carousel-inner{
             position: relative;
