@@ -18,12 +18,19 @@ $fa-font-path: '../webfonts';
 img{
     width: 100%;
 }
+a{
+    color: $whiteColorTx;
+    text-decoration: none;
+}
 // ********UTILITYS
 .my-btn{
     border: none;
     background-color: $redColorBg;
     padding: 5px 30px;
     color: $whiteColorTx;
+}
+.red-text{
+    color: $redColorTx;
 }
 // ********STRUCTURE
 //header
@@ -62,6 +69,7 @@ header{
         }
         .carousel-control-prev,
         .carousel-control-next{
+            overflow-x: hidden;
             opacity: 1;
             .slide-btn{
                 padding: 5px;
@@ -89,6 +97,44 @@ header{
             .slide-btn.carousel-control-next-icon::after{
                 content: 'NEXT';
             }
+        }
+    }
+}
+//footer
+footer{
+    color: $whiteColorTx;
+    background-image: url(../images/cielostellato.PNG);
+    >*{
+        min-width: 50%;
+        position: relative;
+    }
+    a:hover{
+        color: $brownColorTx;
+    }
+    >figure{
+        margin: 0 !important;
+        object-fit: cover;
+        img{
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+    ul{
+        padding: 0;
+    }
+    .title-list{
+        color: $brownColorTx;
+        font-size: 1.2em;
+    }
+    .sub-title-list{
+        color:$brownColorTx;
+    }
+    .follow-us{
+        *{
+            padding-left: 0;
+        }
+        i{
+            padding: 0 4px;
         }
     }
 }
