@@ -38,7 +38,7 @@
             </ul>
 
             <ul class="d-flex justify-content-between gap-3 align-items-center clickable">
-                <li class="dropdown">
+                <li class="dropdown cart">
                     <div class="drop">
                         <div class="cartNumber">{{ store.cartList.length }}</div>
                         <i class="fa-solid fa-motorcycle me-1"></i><span>CART</span>
@@ -47,9 +47,14 @@
                     <div class="dropdown-content">
 
                         <!-- se esistono prodotti li scrorre -->
-                        <div v-if="store.cartList.length > 0" v-for="(product,index) in cartList" :key="index"><!--cambiare key=index con product.id-->
-                            <!-- <span>{{product.name}}</span> -->
-
+                        <div v-if="store.cartList.length > 0">
+                            <div class="d-flex product" v-for="(product,index) in store.cartList" :key="index"><!--cambiare key=index con product.id-->
+                                <figure><img :src="product.imgUrl" :alt="'immagine'+ product.name"></figure>
+                                <div>{{ product.name }}</div>
+                                <div>quantity: {{product.quantityInCart}}</div>
+                                <div>price: ${{ product.realPrice }}</div>
+                            </div>
+                            <div class="text-center"><button class="my-btn">BUY</button></div>
                         </div>
 
                         <!-- altrimenti visualizza che il carrello è vuoto-->

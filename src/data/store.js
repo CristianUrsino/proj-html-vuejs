@@ -401,5 +401,73 @@ export const store = reactive({
             name:'COMBO GRANDE',
             description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, magnam.',
         },
-    ]
+    ],
+    menuList:[
+        {
+            id:1,
+            imgUrl:'images/h3-product-img-2a-150x150.png',
+            name:'MARGHERITA1',
+            price: 5,
+            quantityInCart:0,
+            quantityInStore: 10,
+            discount: 0,
+            realPrice: null,
+        },
+        {
+            id:2,
+            imgUrl:'images/h3-product-img-2a-150x150.png',
+            name:'MARGHERITA2',
+            price: 5,
+            quantityInCart:0,
+            quantityInStore: 10,
+            discount: 0,
+            realPrice: null,
+
+        },
+        {
+            id:3,
+            imgUrl:'images/h3-product-img-2a-150x150.png',
+            name:'MARGHERITA3',
+            price: 10,
+            quantityInCart:0,
+            quantityInStore: 10,
+            discount: 25,
+            realPrice: null,
+
+        },
+        {
+            id:4,
+            imgUrl:'images/h3-product-img-2a-150x150.png',
+            name:'MARGHERITA4',
+            price: 5,
+            quantityInCart:0,
+            quantityInStore: 10,
+            discount: 0,
+            realPrice: null,
+
+        },
+        {
+            id:5,
+            imgUrl:'images/h3-product-img-2a-150x150.png',
+            name:'MARGHERITA5',
+            price: 5,
+            quantityInCart:0,
+            quantityInStore: 0,
+            discount: 0,
+            realPrice: null,
+
+        },
+        {
+            id:6,
+            imgUrl:'images/h3-product-img-2a-150x150.png',
+            name:'MARGHERITA6',
+            price: 5,
+            quantityInCart:0,
+            quantityInStore: 10,
+            discount: 0,
+            realPrice: null,
+
+        },
+    ],
+
 })

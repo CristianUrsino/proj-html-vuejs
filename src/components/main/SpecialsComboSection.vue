@@ -8,13 +8,13 @@
             <div class="col-12 col-lg-6">
                 <div>
                     <h2>SPECIALS*</h2>
-                    <div class="my-gray-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, molestiae?</div>
+                    <div class="gray-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, molestiae?</div>
                 </div>
                 <div class="d-flex gap-4 my-4" v-for="combo in store.specialsComboList" :key="combo.id">
                     <h4 class="red-text">${{combo.price}}</h4>
                     <div>
                         <h4>{{combo.name}}</h4>
-                        <div class="my-gray-text">{{combo.description}}</div>
+                        <div class="gray-text">{{combo.description}}</div>
                     </div>
                 </div>
             </div>

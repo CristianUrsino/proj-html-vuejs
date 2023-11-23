@@ -10,7 +10,6 @@ $fa-font-path: '../webfonts';
 
 // ********GENERAL
 *{
-    text-align: 0.8em;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,8 +36,11 @@ a{
 .clickable{
     cursor: pointer;
 }
-.my-gray-text{
+.gray-text{
     color: $darkGrayColorTx;
+}
+.brown-text{
+    color: $brownColorTx;
 }
 // ********STRUCTURE
 //header
@@ -109,6 +111,12 @@ header{
                         color: $whiteColorTx;
                     }
                 }
+                .product{
+                    color: $whiteColorTx;
+                    img{
+                        width: 50px;
+                    }
+                }
             }
         }
         .dropdown:hover .dropdown-content {
@@ -117,6 +125,9 @@ header{
         .dropdown-content a:hover .nested-dropdown {
             display: block;
           }
+        .dropdown.cart .dropdown-content{
+            right:0
+        }
         img{
             width: 150px;
         }
@@ -263,6 +274,7 @@ main{
         font-size: 0.6em;
         .row{
             figure{
+                padding: 0;
                 position: relative;
                 margin: 0;
                 .over-img{
@@ -277,6 +289,50 @@ main{
             >div{
                 padding: 120px 150px;
             }
+        }
+    }
+    //menù
+    .menu-section{
+        overflow-x: hidden;
+        font-size: 0.6em;
+        .card-pizza{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 200px;
+            }
+            .stamp{
+                color: $whiteColorTx;
+                font-size: 0.8em;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                position: absolute;
+                top: 20px;
+            }
+            .sold{
+                right: 50px;
+                background-color: $redColorBg;
+            }
+            .deleted{
+                color:$darkGrayColorTx;
+                text-decoration: line-through;
+            }
+            .discount{
+                left: 50px;
+                background-color: $orangeColorBg;
+            }
+        }
+        .card-pizza.first{
+            transform: translate(-50%,0);
+        }
+        .card-pizza.last{
+            transform: translate(50%,0);
         }
     }
 }
@@ -305,9 +361,6 @@ footer{
     .title-list{
         color: $brownColorTx;
         font-size: 1.2em;
-    }
-    .sub-title-list{
-        color:$brownColorTx;
     }
     i:hover{
         color: $brownColorTx;
