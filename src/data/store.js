@@ -1,7 +1,7 @@
 import { reactive } from "vue";
 
 export const store = reactive({
-    currentPageName : 'home',
+    currentPageName : 'pizzeria home',
     cartList:[],
     navLinks:[
         {
@@ -10,30 +10,25 @@ export const store = reactive({
             primaryLinks:[
             {
                 id:1,
-                text:'list types: ',
+                text:'main home',
                 link:'#',
-                subLinks:[
-                    {
-                        id:1,
-                        text: 'don menù',
-                        link:'#',
-                    },
-                    {
-                        id:2,
-                        text: 'don light menù',
-                        link:'#',
-                    },
-                    {
-                        id:3,
-                        text: 'don dark menù',
-                        link:'#',
-                    }
-                ],
+                subLinks:[],
             },
             {
-                id:1,
-                alwaysActive : '',
-                text:'home',
+                id:2,
+                text:'pizzeria home',
+                link:'#',
+                subLinks:[],
+            },
+            {
+                id:3,
+                text:'pizza light',
+                link:'#',
+                subLinks:[],
+            },
+            {
+                id:4,
+                text:'pizza dark',
                 link:'#',
                 subLinks:[],
             },
@@ -41,33 +36,41 @@ export const store = reactive({
         },
         {
             id:2,
-            text: 'HOME',
+            text: 'PAGES',
             primaryLinks:[
             {
                 id:1,
-                text:'list types: ',
+                text:'about us',
                 link:'#',
-                subLinks:[
-                    {
-                        id:1,
-                        text: 'don menù',
-                        link:'#',
-                    },
-                    {
-                        id:2,
-                        text: 'don light menù',
-                        link:'#',
-                    },
-                    {
-                        id:3,
-                        text: 'don dark menù',
-                        link:'#',
-                    }
-                ],
+                subLinks:[],
             },
             {
-                id:1,
-                text:'no list',
+                id:2,
+                text:'our servise',
+                link:'#',
+                subLinks:[],
+            },
+            {
+                id:3,
+                text:'our team',
+                link:'#',
+                subLinks:[],
+            },
+            {
+                id:4,
+                text:'our history',
+                link:'#',
+                subLinks:[],
+            },
+            {
+                id:5,
+                text:'contact us',
+                link:'#',
+                subLinks:[],
+            },
+            {
+                id:6,
+                text:'reservation',
                 link:'#',
                 subLinks:[],
             },
@@ -75,7 +78,7 @@ export const store = reactive({
         },
         {
             id:3,
-            text: 'HOME',
+            text: "MENU'",
             primaryLinks:[
             {
                 id:1,
@@ -100,7 +103,55 @@ export const store = reactive({
                 ],
             },
             {
-                id:1,
+                id:2,
+                text:'list leyout',
+                link:'#',
+                subLinks:[
+                    {
+                        id:1,
+                        text: '3 columns',
+                        link:'#',
+                    },
+                    {
+                        id:2,
+                        text: '4 columns',
+                        link:'#',
+                    },
+                    {
+                        id:3,
+                        text: '5 columns',
+                        link:'#',
+                    },
+                    {
+                        id:4,
+                        text: '6 columns',
+                        link:'#',
+                    },
+                    {
+                        id:5,
+                        text: '7 columns',
+                        link:'#',
+                    },
+                    {
+                        id:6,
+                        text: '8 columns',
+                        link:'#',
+                    },
+                    {
+                        id:7,
+                        text: '9 columns',
+                        link:'#',
+                    },
+                ],
+            },
+            {
+                id:3,
+                text:'no list',
+                link:'#',
+                subLinks:[],
+            },
+            {
+                id:4,
                 text:'no list',
                 link:'#',
                 subLinks:[],
@@ -331,4 +382,24 @@ export const store = reactive({
             link:'#',
         },
     ],
+    specialsComboList:[
+        {
+            id:1,
+            price:10,
+            name:'COMBO PICCOLA',
+            description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, magnam.',
+        },
+        {
+            id:2,
+            price:20,
+            name:'COMBO MEDIA',
+            description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, magnam.',
+        },
+        {
+            id:3,
+            price:30,
+            name:'COMBO GRANDE',
+            description:'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, magnam.',
+        },
+    ]
 })

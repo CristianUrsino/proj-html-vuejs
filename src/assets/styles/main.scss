@@ -10,6 +10,7 @@ $fa-font-path: '../webfonts';
 
 // ********GENERAL
 *{
+    text-align: 0.8em;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,6 +36,9 @@ a{
 }
 .clickable{
     cursor: pointer;
+}
+.my-gray-text{
+    color: $darkGrayColorTx;
 }
 // ********STRUCTURE
 //header
@@ -90,7 +94,7 @@ header{
                 .nested-dropdown {
                     position: absolute;
                     top: -5px;
-                    right: 100%;
+                    left: 100%;
                     display: none;
                     z-index: 3000;
                     background-color: $blackColorBg;
@@ -251,6 +255,28 @@ main{
         }
         .my-card:hover .under-card{
             animation: gallery-under-card-animation 0.2s linear forwards;
+        }
+    }
+    //special combo
+    .special-combo-section{
+        color: $blackColorTx;//cambiare
+        font-size: 0.6em;
+        .row{
+            figure{
+                position: relative;
+                margin: 0;
+                .over-img{
+                    z-index: 10;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 70%;
+                }
+            }
+            >div{
+                padding: 120px 150px;
+            }
         }
     }
 }
