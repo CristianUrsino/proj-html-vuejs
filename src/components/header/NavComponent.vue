@@ -7,20 +7,23 @@
             <ul class="d-flex justify-content-between gap-3 align-items-center">
                 <!-- diverso da 4 perchè è il logo -->
                 <li  v-for="dropLink in store.navLinks" :key="dropLink.id" class="dropdown">
-                    <div v-show="dropLink.id !== 4" class="drop"><span v-if="dropLink.id===1"><img src="images/svg-0.svg" alt="mustache icon"></span>{{dropLink.text}}</div>
+                    <div v-show="dropLink.id !== 4" class="drop">
+                        <span v-if="dropLink.id===1"><img src="images/svg-0.svg" alt="mustache icon"></span>
+                        {{dropLink.text}}
+                    </div>
 
                     <div v-show="dropLink.id !== 4" class="dropdown-content">
 
                         <!-- se esistono link scrorre -->
                         <a v-show="dropLink.primaryLinks.length > 0" v-for="(link,i) in dropLink.primaryLinks" :key="link.id" @mouseenter="addActive(i)" @mouseleave="removeActive" :class="{'active':(currentActive ===  i || link.text === store.CurrentPageName)}" :href="link.link">
-                            <span v-if="currentActive === i"><img src="images/svg-0.svg" alt="mustache icon"></span>
+                            <span class="mustacheIcon"><img src="images/svg-0.svg" alt="mustache icon"></span>
                             <span>{{link.text}}</span>
 
                             <!-- se esistono sotto link scorre -->
                             <div class="nested-dropdown" v-if="link.subLinks.length > 0">
                                 <!-- active è >=0 se nei link primary e <0 se nei secondary-->
                                 <a v-for="(subLink,y) in link.subLinks" @mouseenter="addActive(0 - (y+1))" @mouseleave="removeActive" :class="{'active':currentActive === 0 - (y+1)}" href="#">
-                                    <span v-if="currentActive === 0 - (y+1)"><img src="images/svg-0.svg" alt="mustache icon"></span>
+                                    <span class="mustacheIcon"><img src="images/svg-0.svg" alt="mustache icon"></span>
                                     <span>{{subLink.text}}</span>
                                 </a>
                             </div>
