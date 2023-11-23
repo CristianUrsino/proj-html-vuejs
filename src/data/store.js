@@ -308,5 +308,27 @@ export const store = reactive({
             link:'#',
             iconClass: 'fa-brands fa-linkedin fa-xs',
         },
-    ]
+    ],
+    galleryImgs:[
+        {
+            id:1,
+            url:'images/h3-img-1.jpg',
+            link:'#',
+        },
+        {
+            id:2,
+            url:'images/h3-img-2.jpg',
+            link:'#',
+        },
+        {
+            id:3,
+            url:'images/h3-img-3.jpg',
+            link:'#',
+        },
+        {
+            id:4,
+            url:'images/h3-img-4.jpg',
+            link:'#',
+        },
+    ],
 })

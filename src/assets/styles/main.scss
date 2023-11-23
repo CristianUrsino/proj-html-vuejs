@@ -163,21 +163,26 @@ header{
             position: relative;
             height: calc(100vh - 150px);
         }
-        .pizza-slice-img{
-            width: 28%;
-            min-width: 200px;
-            z-index: 1000;
-        }
-        .written-slice-pizza-img{
-            width: 60%;
-            min-width: 300px;
-        }
         .pizza-slice-img,
         .written-slice-pizza-img{
             position: absolute;
-            top: 38vh;
             left: 50%;
             transform: translate(-50%,-50%);
+        }
+        .pizza-slice-img{
+            opacity: 0;
+            width: 25%;
+            min-width: 180px;
+            animation: pizza-animation 1.5s linear forwards;
+            z-index: 1000;
+            top: 20vh;
+        }
+        .written-slice-pizza-img{
+            opacity: 0;
+            width: 35%;
+            top: 38vh;
+            min-width: 180px;
+            animation: written-animation 1.5s linear forwards;
         }
         .carousel-control-prev,
         .carousel-control-next{
@@ -209,6 +214,43 @@ header{
             .slide-btn.carousel-control-next-icon::after{
                 content: 'NEXT';
             }
+        }
+    }
+}
+//main
+main{
+    .gallery-section{
+        .figure{
+            margin: 0;
+        }
+        .my-card{
+            position: relative;
+            .over-card{
+                opacity: 1;
+            }
+            .under-card{
+                opacity: 0;
+                position: absolute;
+                top: 47%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                width: 83px;
+                height: 83px;
+                line-height: 83px;
+                text-align: center;
+                border-radius: 50%;
+                color: $whiteColorTx;
+                background-color: $redColorBg;
+                img{
+                    width: 50%;
+                }
+            }
+        }
+        .my-card:hover .over-card{
+            animation: gallery-over-card-animation 0.1s linear forwards;
+        }
+        .my-card:hover .under-card{
+            animation: gallery-under-card-animation 0.2s linear forwards;
         }
     }
 }
@@ -275,5 +317,58 @@ footer{
     100%{
         color: $redColorTx;
         transform: rotate(180deg);
+    }
+}
+@keyframes written-animation {
+    0%{
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+        width: 60%;
+        min-width: 300px;
+    }
+    100%{
+        opacity: 1;
+        width: 60%;
+        min-width: 30px;
+    }
+}
+@keyframes pizza-animation {
+    0%{
+        opacity: 0;
+    }
+    49%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        top: 20vh;
+    }
+    100%{
+        opacity: 1;
+        top: 38vh;
+    }
+}
+@keyframes gallery-over-card-animation{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes gallery-under-card-animation{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

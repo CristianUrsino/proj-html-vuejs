@@ -1,15 +1,15 @@
 <template>
-    <h1>MAIN</h1>
-    <h3><GallerySection/></h3>
-    <h3><QuotesSection/></h3>
-    <h3><SpecialsComboSection/></h3>
-    <h3><SloganSection/></h3>
-    <h3><TeamSection/></h3>
-    <h3><SponsorSection/></h3>
-    <h3><MenuSection/></h3>
-    <h3><EventsSection/></h3>
-    <h3><ReservationSection/></h3>
-    
+    <main>
+        <h3><GallerySection/></h3>
+        <h3><QuotesSection/></h3>
+        <h3><SpecialsComboSection/></h3>
+        <h3><SloganSection/></h3>
+        <h3><TeamSection/></h3>
+        <h3><SponsorSection/></h3>
+        <h3><MenuSection/></h3>
+        <h3><EventsSection/></h3>
+        <h3><ReservationSection/></h3>
+    </main>
 </template>
 
 <script>
