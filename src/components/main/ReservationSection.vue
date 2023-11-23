@@ -1,5 +1,5 @@
 <template>
-    <h3>reservationSec</h3>
+    <!-- <h3>reservationSec</h3> -->
 </template>
 
 <script>

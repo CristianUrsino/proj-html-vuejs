@@ -1,5 +1,5 @@
 <template>
-    <h3>EventsSec</h3>
+    <!-- <h3>EventsSec</h3> -->
 </template>
 
 <script>

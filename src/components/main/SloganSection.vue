@@ -1,5 +1,5 @@
 <template>
-    <h3>SloganSec</h3>
+    <!-- <h3>SloganSec</h3> -->
 </template>
 
 <script>

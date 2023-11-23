@@ -1,5 +1,5 @@
 <template>
-    <h3>quotesSec</h3>
+    <!-- <h3>quotesSec</h3> -->
 </template>
 
 <script>

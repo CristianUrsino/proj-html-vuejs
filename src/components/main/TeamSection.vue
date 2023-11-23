@@ -1,5 +1,5 @@
 <template>
-    <h3>TeamSec</h3>
+    <!-- <h3>TeamSec</h3> -->
 </template>
 
 <script>
